@@ -10,7 +10,7 @@
 //******* Variables ***********************************************************
 // pin for speaker
 const int speakerPin = 9;
-int tempo = 150;
+int tempo = 100;
 
 //Melody 1
 //int length = 15; // the number of notes
@@ -22,10 +22,10 @@ int tempo = 150;
 //char notes[] = "egC egC egCDCb abCabg";
 //int beats[]={3, 2, 2, 1, 3, 2, 2, 1, 2, 1, 2, 2, 1, 3, 1, 2, 1, 1, 1, 1, 3, 1};
 
-//Melody 3 Oh Susana
-int length = 55; 
-char notes[] = "cdeggagecdeedcdcdeggagecdeeddcffaaaggecdcdeggagecdeeddc";
-int beats[]={1, 1, 2, 2, 3, 1, 2, 2, 3, 1, 2, 2, 2, 2, 6, 1, 1, 2, 2, 3, 1, 2, 2, 3, 1, 2, 2, 2, 2, 8, 2, 2, 1, 3, 1, 1, 1, 1, 1, 6, 1, 1, 2, 2, 3, 1, 2, 2, 3, 1, 2, 2, 2, 2, 8};
+//Melody 3 Himne Madriss 
+int length = 60; 
+char notes[] = "efga Cbag fgbagfedegfedcefga Cbag fgbagfedegfedcefgaaaabbabC ";
+int beats[]={1,3,1,4,7,1,3,1,4,8,3,1,3,1,3,1,4,3,1,3,1,3,1,3,1,3,1,4,7,1,3,1,4,8,3,1,3,1,3,1,4,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,8};
 
 
 

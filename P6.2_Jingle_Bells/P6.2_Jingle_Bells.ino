@@ -18,12 +18,18 @@ int tempo = 300;
 //char notes[] = "ccggaagffeeddc "; // a space represents a rest
 //int beats[] = { 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 4 }; // time every note
 
-//Melody 2 Jingle Bells
+//Melody 2 himne del Barça
+//int length = 21; 
+//char notes[] = "egC egC egCDCb abCabg";
+//int beats[]={3, 2, 2, 1, 3, 2, 2, 1, 2, 1, 2, 2, 1, 3, 1, 2, 1, 1, 1, 1, 3, 1};
+
+
+//Melody 3 Jingle Bells
 int length = 50; 
 char notes[] = "eeeeeeegcdefffffeeeeddedgeeeeeeegcdefffffeeeggfdc";
 int beats[] = {1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4 };
 
-//Melody 3
+
 
 
 //********** Setup ****************************************************************
