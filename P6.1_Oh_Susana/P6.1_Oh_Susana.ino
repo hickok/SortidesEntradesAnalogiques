@@ -9,8 +9,8 @@
 
 //******* Variables ***********************************************************
 // pin for speaker
-const int speakerPin = 9;
-int tempo = 150;
+   const int speakerPin = 9;
+   int tempo = 150;
 
 //Melody 1
 //int length = 15; // the number of notes
@@ -23,20 +23,20 @@ int tempo = 150;
 //int beats[]={3, 2, 2, 1, 3, 2, 2, 1, 2, 1, 2, 2, 1, 3, 1, 2, 1, 1, 1, 1, 3, 1};
 
 //Melody 3 Oh Susana
-int length = 55; 
-char notes[] = "cdeggagecdeedcdcdeggagecdeeddcffaaaggecdcdeggagecdeeddc";
-int beats[]={1, 1, 2, 2, 3, 1, 2, 2, 3, 1, 2, 2, 2, 2, 6, 1, 1, 2, 2, 3, 1, 2, 2, 3, 1, 2, 2, 2, 2, 8, 2, 2, 1, 3, 1, 1, 1, 1, 1, 6, 1, 1, 2, 2, 3, 1, 2, 2, 3, 1, 2, 2, 2, 2, 8};
+   int length = 55; 
+   char notes[] = "cdeggagecdeedcdcdeggagecdeeddcffaaaggecdcdeggagecdeeddc";
+   int beats[]={1, 1, 2, 2, 3, 1, 2, 2, 3, 1, 2, 2, 2, 2, 6, 1, 1, 2, 2, 3, 1, 2, 2, 3, 1, 2, 2, 2, 2, 8, 2, 2, 1, 3, 1, 1, 1, 1, 1, 6, 1, 1, 2, 2, 3, 1, 2, 2, 3, 1, 2, 2, 2, 2, 8};
 
 
 
 //****** Setup ****************************************************************
-void setup() {
+   void setup() {
   // make the pin output
-  pinMode(speakerPin, OUTPUT);
+   pinMode(speakerPin, OUTPUT);
 }
 
 //***** Loop *****************************************************************
-void loop() {
+   void loop() {
     for (int i = 0; i < length; i++) {
     if (notes[i] == ' ') {
       delay(beats[i] * tempo);
@@ -48,8 +48,8 @@ void loop() {
   }
 }
 //****** Funcions *************************************************************
-void playTone(int tone, int duration) {
-  for (long i = 0; i < duration * 1000L; i += tone * 2) {
+   void playTone(int tone, int duration) {
+   for (long i = 0; i < duration * 1000L; i += tone * 2) {
     digitalWrite(speakerPin, HIGH);
     delayMicroseconds(tone);
     digitalWrite(speakerPin, LOW);
@@ -57,13 +57,13 @@ void playTone(int tone, int duration) {
   }
 }
 
-void playNote(char note, int duration) {
-  char names[] = { 'c', 'd', 'e', 'f', 'g', 'a', 'b', 'C' , 'D'};
-  int tones[] = { 1915, 1700, 1519, 1432, 1275, 1136, 1014, 956, 840};
+   void playNote(char note, int duration) {
+   char names[] = { 'c', 'd', 'e', 'f', 'g', 'a', 'b', 'C' , 'D'};
+   int tones[] = { 1915, 1700, 1519, 1432, 1275, 1136, 1014, 956, 840};
 
-  // play the tone corresponding to the note name
-  for (int i = 0; i < 9; i++) {
-    if (names[i] == note) {
+   // play the tone corresponding to the note name
+   for (int i = 0; i < 9; i++) {
+   if (names[i] == note) {
       playTone(tones[i], duration);
     }
   }

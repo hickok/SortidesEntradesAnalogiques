@@ -25,21 +25,21 @@ int tempo = 300;
 
 
 //Melody 3 Jingle Bells
-int length = 50; 
-char notes[] = "eeeeeeegcdefffffeeeeddedgeeeeeeegcdefffffeeeggfdc";
-int beats[] = {1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4 };
-
+  int length = 50; 
+  char notes[] = "eeeeeeegcdefffffeeeeddedgeeeeeeegcdefffffeeeggfdc";
+  int beats[] = {1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4 };
+  
 
 
 
 //********** Setup ****************************************************************
-void setup() {
+  void setup() {
   // make the pin output
   pinMode(speakerPin, OUTPUT);
 }
 
 //********** Loop *****************************************************************
-void loop() {
+  void loop() {
     for (int i = 0; i < length; i++) {
     if (notes[i] == ' ') {
       delay(beats[i] * tempo);
@@ -52,7 +52,7 @@ void loop() {
 }
 
 //********** Funcions *************************************************************
-void playTone(int tone, int duration) {
+  void playTone(int tone, int duration) {
   for (long i = 0; i < duration * 1000L; i += tone * 2) {
     digitalWrite(speakerPin, HIGH);
     delayMicroseconds(tone);
@@ -61,7 +61,7 @@ void playTone(int tone, int duration) {
   }
 }
 
-void playNote(char note, int duration) {
+  void playNote(char note, int duration) {
   char names[] = { 'c', 'd', 'e', 'f', 'g', 'a', 'b', 'C' , 'D'};
   int tones[] = { 1915, 1700, 1519, 1432, 1275, 1136, 1014, 956, 840};
 

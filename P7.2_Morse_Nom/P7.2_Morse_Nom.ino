@@ -9,18 +9,18 @@
 
 //****** Variables ************************************************************
 // pin for speaker
-const int pin = 9;
+ const int pin = 9;
 
-int note = 1047;
-int velocitat = 10;
+ int note = 1047;
+ int velocitat = 10;
 
 //****** Setup ****************************************************************
-void setup()
+ void setup()
 {
 }
 
 //****** Loop *****************************************************************
-void loop()
+ void loop()
 {
   //H   ** Hola sóc el Juan **
   punt();
@@ -105,26 +105,26 @@ void loop()
 }
 
 //****** Funcions *************************************************************
-void punt()
+ void punt()
 {
   tone(pin, note, 1000/velocitat);
   delay(1000/velocitat); 
   delay(1000/velocitat); 
 }
 
-void ratlla()
+ void ratlla()
 {
   tone(pin, note, 3*(1000/velocitat));
   delay(3*(1000/velocitat)); 
   delay(1000/velocitat);  
 }
 
-void espaiL()  //Espai entre lletres
+ void espaiL()  //Espai entre lletres
 {  
   delay(2*(1000/velocitat));  
 }
 
-void espaiP()  //Espai entre paraules
+ void espaiP()  //Espai entre paraules
 {   
   delay(6*(1000/velocitat));  
 }

@@ -9,8 +9,8 @@
 
 //******* Variables ***********************************************************
 // pin for speaker
-const int speakerPin = 9;
-int tempo = 100;
+ const int speakerPin = 9;
+ int tempo = 100;
 
 //Melody 1
 //int length = 15; // the number of notes
@@ -23,20 +23,20 @@ int tempo = 100;
 //int beats[]={3, 2, 2, 1, 3, 2, 2, 1, 2, 1, 2, 2, 1, 3, 1, 2, 1, 1, 1, 1, 3, 1};
 
 //Melody 3 Himne Madriss 
-int length = 60; 
-char notes[] = "efga Cbag fgbagfedegfedcefga Cbag fgbagfedegfedcefgaaaabbabC ";
-int beats[]={1,3,1,4,7,1,3,1,4,8,3,1,3,1,3,1,4,3,1,3,1,3,1,3,1,3,1,4,7,1,3,1,4,8,3,1,3,1,3,1,4,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,8};
+  int length = 60; 
+  char notes[] = "efga Cbag fgbagfedegfedcefga Cbag fgbagfedegfedcefgaaaabbabC ";
+  int beats[]={1,3,1,4,7,1,3,1,4,8,3,1,3,1,3,1,4,3,1,3,1,3,1,3,1,3,1,4,7,1,3,1,4,8,3,1,3,1,3,1,4,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,8};
 
 
 
 //****** Setup ****************************************************************
-void setup() {
+  void setup() {
   // make the pin output
   pinMode(speakerPin, OUTPUT);
 }
 
 //***** Loop *****************************************************************
-void loop() {
+  void loop() {
     for (int i = 0; i < length; i++) {
     if (notes[i] == ' ') {
       delay(beats[i] * tempo);
@@ -48,7 +48,7 @@ void loop() {
   }
 }
 //****** Funcions *************************************************************
-void playTone(int tone, int duration) {
+  void playTone(int tone, int duration) {
   for (long i = 0; i < duration * 1000L; i += tone * 2) {
     digitalWrite(speakerPin, HIGH);
     delayMicroseconds(tone);
@@ -57,7 +57,7 @@ void playTone(int tone, int duration) {
   }
 }
 
-void playNote(char note, int duration) {
+  void playNote(char note, int duration) {
   char names[] = { 'c', 'd', 'e', 'f', 'g', 'a', 'b', 'C' , 'D'};
   int tones[] = { 1915, 1700, 1519, 1432, 1275, 1136, 1014, 956, 840};
 

@@ -9,18 +9,18 @@
 //********** Includes *************************************************************
 
 //********** Variables ************************************************************
-const int xiulet = 9;        // donar nom al pin 9 de l’Arduino
-const int pot0 = A0;         // donar nom al pin A0 de l’Arduino
-int valPot0;                 // guardar valor del potènciometre  
+  const int xiulet = 9;        // donar nom al pin 9 de l’Arduino
+  const int pot0 = A0;         // donar nom al pin A0 de l’Arduino
+  int valPot0;                 // guardar valor del potènciometre  
 
 //********** Setup ****************************************************************
-void setup()
+  void setup()
 {
   pinMode(xiulet, OUTPUT);   // definir el pin 9 com una sortida
 }
 
 //********** Loop *****************************************************************
-void loop()
+  void loop()
 {
   valPot0 = analogRead(pot0);   // llegir valor potenciòmetre 
 
